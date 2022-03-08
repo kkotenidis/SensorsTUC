@@ -1,0 +1,22 @@
+---
+components:
+  schemas:
+    IoTSensor:
+      $ref: "https://kkotenidis.github.io/SensorsTUC/IoTSensor.yaml#/IoTSensor"
+info:
+  description: "IoT Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection"
+  title: IoT Sensor by Kydon
+  version: "0.0.1"
+openapi: "3.0.0"
+
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        ? "200"
+        :
+          content:
+            application/ld+json:
+              schema:
+                type: object
+          description: OK
