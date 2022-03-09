@@ -1,4 +1,10 @@
 ---
+#########################################
+#Sensor Monitoring for Kydon Chania.    #
+#TUC                                    #
+#Owned by Kydon                         #
+#########################################
+
 components:
   schemas:
     IoTSensor:
