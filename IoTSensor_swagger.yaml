@@ -2,7 +2,7 @@
 components:
   schemas:
     IoTSensor:
-      $ref: "https://raw.githubusercontent.com/kkotenidis/SensorsTUC/main/IoTSensor.yaml#/IotSensor"
+      $ref: "https://raw.githubusercontent.com/kkotenidis/SensorsTUC/main/IoTSensor.yaml#/IoTSensor"
 info:
   description: "IoT Sensor by Kydon for T, RH, soilMoisture"
   title: IoT Sensor by Kydon
