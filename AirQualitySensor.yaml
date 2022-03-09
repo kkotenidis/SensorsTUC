@@ -186,7 +186,7 @@ AirQuality:
     - dateObserved
     - location
   type: object
-  x-model-schema: https://smart-data-models.github.io/kkotenidis/SensorsTUC/airqualitysensor_schema.json
+  x-model-schema: https://raw.githubusercontent.com/kkotenidis/SensorsTUC/main/airqualitysensor_schema.json
 
 
         
