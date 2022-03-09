@@ -54,19 +54,26 @@ IoTSensor:
       type: string
       x-ngsi:
         type: Property
+        
     id:
-      anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
-        - description: 'Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'Unique identifier.'
+      description: 'Kydon Chania'
+      type: string
       x-ngsi:
         type: Property
+        
+    #id:
+    #  anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
+    #    - description: 'Identifier format of any NGSI entity'
+    #      maxLength: 256
+    #      minLength: 1
+    #      pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+    #      type: string
+    #    - description: 'Identifier format of any NGSI entity'
+    #      format: uri
+    #      type: string
+    #  description: 'Unique identifier.'
+    #  x-ngsi:
+    #    type: Property
     location:
       description: 'Geojson reference to the item. Type: Point'
       oneOf:
