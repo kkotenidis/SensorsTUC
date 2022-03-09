@@ -54,26 +54,19 @@ IoTSensor:
       type: string
       x-ngsi:
         type: Property
-        
     id:
-      description: 'Kydon Chania'
-      type: string
+      anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
+        - description: 'Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier.'
       x-ngsi:
         type: Property
-        
-    #id:
-    #  anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
-    #    - description: 'Identifier format of any NGSI entity'
-    #      maxLength: 256
-    #      minLength: 1
-    #      pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-    #      type: string
-    #    - description: 'Identifier format of any NGSI entity'
-    #      format: uri
-    #      type: string
-    #  description: 'Unique identifier.'
-    #  x-ngsi:
-    #    type: Property
     location:
       description: 'Geojson reference to the item. Type: Point'
       oneOf:
@@ -117,14 +110,21 @@ IoTSensor:
       type: number
       x-ngsi:
         type: Property
+        
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
-      items:
-        anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier'
-      type: array
+      description: 'Kydon Chania'
+      type: string
       x-ngsi:
         type: Property
+        
+    #owner:
+    #  description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+    #  items:
+    #    anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
+    #    description: 'Property. Unique identifier'
+    #  type: array
+    #  x-ngsi:
+    #    type: Property
     pm10:
       description: 'Particulate matter 10 micrometers or less in diameter'
       minimum: 0
