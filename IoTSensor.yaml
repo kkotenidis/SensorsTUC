@@ -4,6 +4,9 @@ IoTSensor:
     address:
       description: 'Address of the sensor'
       properties:
+        addressCountry:
+          description: 'Country: GR (https://schema.org/addressCountry)'
+          type: string
         addressLocality:
           description: '(https://schema.org/addressLocality)'
           type: string
