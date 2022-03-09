@@ -2,7 +2,7 @@
 components:
   schemas:
     IoTSensor:
-      $ref: "https://kkotenidis.github.io/SensorsTUC/IoTSensor.yaml#/IoTSensor"
+      $ref: "https://kkotenidis.github.io/SensorsTUC/IoTSensor.yaml#/AirQuality"
 info:
   description: "IoT Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection"
   title: IoT Sensor by Kydon
