@@ -4,8 +4,8 @@ components:
     AirQualitySensor:
       $ref: "https://raw.githubusercontent.com/kkotenidis/SensorsTUC/main/AirQualitySensor.yaml#/AirQuality"
 info:
-  description: "IoT Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection"
-  title: IoT Sensor by Kydon
+  description: "AirQualitySensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection"
+title: AirQualitySensor by Kydon
   version: "0.0.1"
 openapi: "3.0.0"
 
