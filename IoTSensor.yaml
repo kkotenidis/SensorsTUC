@@ -55,7 +55,7 @@ IoTSensor:
       x-ngsi:
         type: Property
     id:
-      anyOf: &iotsensor_-_properties_-_owner_-_anyof
+      anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
         - description: 'Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -113,7 +113,7 @@ IoTSensor:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *iotsensor_-_properties_-_owner_-_items_-_anyof
+        anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier'
       type: array
       x-ngsi:
