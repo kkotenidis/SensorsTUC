@@ -1,13 +1,7 @@
 ---
-#########################################
-#Sensor Monitoring for Kydon Chania.    #
-#TUC                                    #
-#Owned by Kydon                         #
-#########################################
-
 components:
   schemas:
-    IoTSensor:
+    AirQualitySensor:
       $ref: "https://kkotenidis.github.io/SensorsTUC/AirQualitySensor.yaml#/AirQuality"
 info:
   description: "IoT Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection"
