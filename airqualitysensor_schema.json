@@ -12,7 +12,7 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "IoTSensor"
+		"AirQualitySensor"
                     ],
                     "description": "Property. NGSI Entity type"
                 },
