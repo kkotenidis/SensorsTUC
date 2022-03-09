@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/schema#",
 	"$schemaVersion": "0.0.1",
 	"modelTags": "",
-	"$id": "https://kkotenidis.gitgub.io/SensorsTUC/airquality_schema.json",
+	"$id": "https://kkotenidis.gitgub.io/SensorsTUC/iotsensor_schema.json",
     "title": "AirQuality Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection",
     "description": "Sensor for observation",
     "type": "object",
