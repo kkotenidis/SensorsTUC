@@ -1,8 +1,8 @@
-IoTSensor:
-  description: 'IoT Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection'
+AirQuality:
+  description: 'AirQuality Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection'
   properties:
     address:
-      description: 'Address of the IoTSensor'
+      description: 'Address of the sensor'
       properties:
         addressCountry:
           description: 'Country: GR (https://schema.org/addressCountry)'
@@ -21,24 +21,24 @@ IoTSensor:
         model: https://schema.org/address
         type: Property
     alternativeName:
-      description: 'IoT Sensor by Kydon'
+      description: 'AirQuality Sensor by Kydon'
       type: string
       x-ngsi:
         type: Property
     co2:
-      description: 'Carbon Dioxide measured by Sensor'
+      description: 'Carbon Dioxide'
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp.'
+      description: 'Entity creation timestamp'
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity.'
+      description: 'Timestamp of the last modification of the entity'
       format: date-time
       type: string
       x-ngsi:
@@ -47,10 +47,10 @@ IoTSensor:
       description: 'The date and time of this observation in ISO8601 UTCformat'
       type: string
       x-ngsi:
-        model: 'https://schema.org/Text '
+        model: 'https://schema.org/Text'
         type: Property
     description:
-      description: 'T, RH, soilMoisture'
+      description: 'T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection'
       type: string
       x-ngsi:
         type: Property
@@ -64,7 +64,7 @@ IoTSensor:
         - description: 'Identifier format of any NGSI entity'
           format: uri
           type: string
-      description: 'Unique identifier.'
+      description: 'Unique identifier'
       x-ngsi:
         type: Property
     location:
@@ -94,18 +94,18 @@ IoTSensor:
       x-ngsi:
         type: Geoproperty
     name:
-      description: 'The name of this item.'
+      description: 'AirQuality Sensor by Kydon'
       type: string
       x-ngsi:
         type: Property
     no2:
-      description: 'Nitrogen dioxide detected'
+      description: 'Nitrogen dioxide'
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     o3:
-      description: 'Ozone detected'
+      description: 'Ozone'
       minimum: 0
       type: number
       x-ngsi:
@@ -126,19 +126,19 @@ IoTSensor:
     #  x-ngsi:
     #    type: Property
     pm10:
-      description: 'Particulate matter 10 micrometers or less in diameter'
+      description: 'Particles of 10 micrometers or less in diameter'
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     pm25:
-      description: 'Particulate matter 2.5 micrometers or less in diameter'
+      description: 'Particles of 2.5 micrometers or less in diameter'
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     relativeHumidity:
-      description: 'Humidity in the Air'
+      description: 'Relative Humidity'
       maximum: 1
       minimum: 0
       type: number
@@ -146,13 +146,13 @@ IoTSensor:
         model: https://schema.org/Number
         type: Property
     so2:
-      description: 'Sulfur dioxide detected'
+      description: 'Sulfur dioxide'
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     temperature:
-      description: 'Temperature of the item'
+      description: 'Temperature'
       type: number
       x-ngsi:
         type: Property
@@ -166,7 +166,7 @@ IoTSensor:
         model: https://schema.org/Text
         type: Property
     windDirection:
-      description: 'Direction of the weather vane'
+      description: 'Wind direction'
       maximum: 180
       minimum: -180
       type: number
@@ -174,7 +174,7 @@ IoTSensor:
         model: http://schema.org/Number
         type: Property
     windSpeed:
-      description: 'Intensity of the wind'
+      description: 'Wind speed'
       minimum: 0
       type: number
       x-ngsi:
