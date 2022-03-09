@@ -1,0 +1,90 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"$schemaVersion": "0.0.1",
+	"modelTags": "",
+	"$id": "https://kkotenidis.gitgub.io/SensorsTUC/airquality_schema.json",
+    "title": "AirQuality Sensor by Kydon for T, RH, CO2, NO2, O3, PM10, PM25, SO2, windSpeed, windDirection",
+    "description": "Sensor for observation",
+    "type": "object",
+    "allOf": [
+    	{
+    		"properties": {
+    			"type": "string",
+    			"enum": [
+    				"IoTSensor"
+    			],
+    			"description": "Property. NGSI Entity type"
+    		},
+    		"dateObserved": {
+    			"type": "string",
+    			"description": "Property. Date and Time of this observation in ISO8601 UTCformat. (https://schema.org/Text)"
+    		},
+    		"refDevice": {
+    			"anyOf": [
+    				{
+    					"type": "string",
+    					"minLength": 1,
+    					"maxLength": 256,
+    					"pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+    					"description": "Property. Identifier format of any NGSI entity"
+    				},
+    				{
+    					"type": "string",
+    					"format": "uri",
+    					"description": "Property. Identifier format of any NGSI entity"
+    				}
+    			],
+    			"description": "Relationship. A reference to the device(s) which captured this observation."
+    		},
+    		"refPointOfInterest": {
+    			"anyOf": [
+    				{
+    					"type": "string",
+    					"minLength": 1,
+    					"maxLength": 256,
+    					"pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+    					"description": "Property. Identifier format of any NGSI entity"
+    				},
+    				{
+    					"type": "string",
+    					"format": "uri",
+    					"description": "Property. Identifier format of any NGSI entity"
+
+    				}    				
+
+    			],
+    			"description": "Relationship. A reference to a point of interest"
+    		},
+    		"relativeHumidity": {
+    			"type": "number",
+    			"minimum": 0,
+    			"maximum": 1,
+    			"description": "Property. Relative Humidity (https://schema.org/Number)"
+    		},
+    		"soilMoisture": {
+    			"type": "number",
+    			"minimum": 0,
+    			"description": "Property. soilMoisture (https://schema.org/Number)"
+    		},
+    		"typeofLocation": {
+    			"type": "string",
+    			"enum": [
+    				"indoor",
+    				"outdoor"
+    			],
+    			"description": "Property. Outdoor Sensor (https://schema.org/Text)"
+    		},
+    		"temperature": {
+    			"type": "number",
+    			"description": "Property. Temperature"
+    		},
+
+    	},
+    ],
+    "required": [
+    	"id",
+    	"type",
+    	"dateObserved",
+    	"location"
+    ]
+}

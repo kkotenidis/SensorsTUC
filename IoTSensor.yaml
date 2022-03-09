@@ -1,0 +1,127 @@
+IoTSensor:
+  description: 'IoTSensor by Kydon for T, RH, soilMoisture'
+  properties:
+    address:
+      description: 'Address of the sensor'
+      properties:
+        addressLocality:
+          description: '(https://schema.org/addressLocality)'
+          type: string
+        addressRegion:
+          description: 'Agioi Apostoloi, Chania, Crete (https://schema.org/addressRegion)'
+          type: string
+        postalCode:
+          description: '73100 (https://schema.org/postalCode)'
+          type: string
+      type: object
+      x-ngsi:
+        model: https://schema.org/address
+        type: Property
+    alternativeName:
+      description: 'IoT Sensor by Kydon'
+      type: string
+      x-ngsi:
+        type: Property
+    dateCreated:
+      description: 'Entity creation timestamp'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateObserved:
+      description: 'The date and time of this observation in ISO8601 UTCformat'
+      type: string
+      x-ngsi:
+        model: 'https://schema.org/Text'
+        type: Property
+    description:
+      description: 'T, RH, soilMoisture'
+      type: string
+      x-ngsi:
+        type: Property
+    id:
+      anyOf: &iotsensor_-_properties_-_owner_-_items_-_anyof
+        - description: 'Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier'
+      x-ngsi:
+        type: Property
+    location:
+      description: 'Geojson reference to the item. Type: Point'
+      oneOf:
+        - description: 'Point'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+      x-ngsi:
+        type: Geoproperty
+    name:
+      description: 'IoT Sensor by Kydon'
+      type: string
+      x-ngsi:
+        type: Property
+
+    owner:
+      description: 'Kydon Chania'
+      type: string
+      x-ngsi:
+        type: Property
+
+    relativeHumidity:
+      description: 'Relative Humidity'
+      maximum: 1
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    temperature:
+      description: 'Temperature'
+      type: number
+      x-ngsi:
+        type: Property
+    typeofLocation:
+      description: 'Type of location: Outdoor'
+      enum:
+        - indoor
+        - outdoor
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+  required:
+    - id
+    - type
+    - dateObserved
+    - location
+  type: object
+  x-model-schema:
