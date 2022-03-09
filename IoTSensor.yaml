@@ -124,4 +124,4 @@ IoTSensor:
     - dateObserved
     - location
   type: object
-  x-model-schema:
+  x-model-schema: https://raw.githubusercontent.com/kkotenidis/SensorsTUC/main/iotsensor_schema.json
